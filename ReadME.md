@@ -21,7 +21,7 @@ $$
 $$
 U(t+1) = \alpha U(t) + I(t) - S(t)\theta
 $$
-
+**
 ## Eligibility Trace Model
 
 The synaptic eligibility trace is defined as:
@@ -43,3 +43,24 @@ $$
 -\eta \sum_t \delta_j(t) e_{ij}(t)
 $$
 
+
+**## Eligibility Trace Model
+
+The synaptic eligibility trace is defined as:
+
+$$
+e_{ij}(t)
+=
+\lambda\, e_{ij}(t-1)
++
+s_i^{\mathrm{pre}}(t)\,
+\frac{\partial s_j^{\mathrm{post}}(t)}{\partial u_j(t)}
+$$
+
+The weight update rule follows a three-factor learning rule:
+
+$$
+\Delta w_{ij}
+=
+-\eta \sum_t \delta_j(t)\, e_{ij}(t)
+$$
